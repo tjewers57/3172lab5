@@ -11,7 +11,6 @@ const API_KEY = process.env.RECIPE_API_KEY;
 
 // Endpoint to search for recipes.
 router.get('/recipe', async (req, res) => {
-    res.status(200).send("hello");
     const json = req.query.preferences;
     const recipePreferences = JSON.parse(json);
     if(!recipePreferences){ // if the request body is empty, return an error/status 400.
@@ -38,8 +37,6 @@ router.get('/recipe', async (req, res) => {
         // fetch the Spoonacular API with the query params above.
         const response = await fetch('https://api.spoonacular.com/recipes/complexSearch?' + queryString.toString());
         const data = await response.json();
-
-        console.log(data);
 
         if(response.status !== 200){
             return res.status(404).json({ error: "Error fetching recipes with given preferences" });
