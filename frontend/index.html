@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Recipe Recommender</title>
+</head>
+<body>
+    <div>
+        <h1>Recipe Finder</h1>
+        <div id="headerWrapper">
+            <form id="recipeForm">
+                <div id="cuisineFormDivider" class="formDivider">
+                    <label for="cuisine">Cuisine</label>
+                    <input name="cuisine" id="cuisine" type="text" placeholder="Cuisine">
+                </div>
+                <div id="dietFormDivider" class="formDivider">
+                    <label for="diet">Diet(s)</label>
+                    <select name="diet" id="diet" multiple>
+                        <option value="glutenfree">Gluten Free</option>
+                        <option value="keto">Ketogenic</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="pescetarian">Pescetarian</option>
+                        <option value="paleo">Paleo</option>
+                        <option value="primal">Primal</option>
+                    </select>
+                </div>
+                <div id="intoleranceFormDivider" class="formDivider">
+                    <label for="intolerances">Intolerance(s)</label>
+                    <select name="intolerances" id="intolerances" multiple>
+                        <option value="dairy">Dairy</option>
+                        <option value="egg">Egg</option>
+                        <option value="gluten">Gluten</option>
+                        <option value="grain">Grain</option>
+                        <option value="peanut">Peanut</option>
+                        <option value="seafood">Seafood</option>
+                        <option value="sesame">Sesame</option>
+                        <option value="shellfish">Shellfish</option>
+                        <option value="soy">Soy</option>
+                        <option value="treenut">Tree Nut</option>
+                        <option value="wheat">Wheat</option>
+                    </select>
+                </div>
+                <div id="ingredientFormDivider" class="formDivider">
+                    <label for="ingredients">Ingredient(s)</label>
+                    <input name="ingredients" id="ingredients" type="text" placeholder="Ingredient">
+                    <input type="button" id="addIngredient" value="Add Ingredient">
+                    <ul id="ingredientContainer">
+                    </ul>
+                </div>
+                <input id="recipeSubmit" type="submit">
+            </form>
+            <aside id="formGuide">
+                <h2>How to Use</h2>
+                <p>
+                    The Recipe Finder is simple to use, just enter your preferences and/or restrictions for recipes and hit submit! <br>
+                </p>
+                <p>
+                    Add ingredients you would like included in the recipes using the 'Add Ingredient' button. <br> <strong>(Enter ingredients one at a time for best results.)</strong>
+                </p>
+            </aside>
+        </div>
+    </div>
+    <h1 id="recipeHeading">Recipes</h1>
+    <div id="recipeContainer">
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

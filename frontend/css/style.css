@@ -1,0 +1,138 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: auto;
+    width: 80%;
+    background-color: #282c34;
+    color: white;
+    padding-top: 3em;
+    padding-bottom: 1em;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+}
+
+#headerWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+button, input, select {
+    background-color: #282c34;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+select {
+    height: 7em;
+    padding: 10px;
+}
+
+button, input {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+input[type=button], input[type=submit] {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+
+label {
+    margin-bottom: 2px;
+    font-weight: bold;
+    font-size: large;
+}
+
+li {
+    list-style: none;
+    border-bottom: 1px solid #181a1f;
+    margin-bottom: 5px;
+}
+
+.removeIngredient {
+    margin-left: 10px;
+}
+
+#recipeForm {
+    display: grid;
+    grid-template-areas: 
+        'cuisine ingredients'
+        'diet ingredients'
+        'intolerances ingredients'
+        'submit submit';
+    width: 75%;
+    flex: 3;
+}
+
+.formDivider {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+
+}
+
+#cuisineFormDivider {
+    grid-area: cuisine;
+}
+
+#dietFormDivider {
+    grid-area: diet;
+}
+
+#intoleranceFormDivider {
+    grid-area: intolerances;
+}
+
+#ingredientFormDivider {
+    grid-area: ingredients;
+}
+
+#recipeSubmit {
+    grid-area: submit;
+}
+
+#recipeForm > label {
+    width: 10%;
+}
+
+#formGuide {
+    background-color: #181a1f;
+    flex: 1.1;
+    padding: 15px;
+    height: 70%;
+    border-radius: 10px;
+}
+
+#recipeContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+}
+
+.recipe {
+    background-color: #181a1f;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 3px;
+}
+
+h1 {
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+}
+
+h2 {
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    width: 75%;
+    margin: auto;
+}
